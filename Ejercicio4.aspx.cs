@@ -19,9 +19,18 @@ namespace TP2_Grupo_4
             Response.Redirect("00-Portada.aspx");
         }
 
-        protected void HPL_Rojo_DataBinding(object sender, EventArgs e)
+        protected void BTN_Validar_Click(object sender, EventArgs e)
         {
-
+            string password = TXT_Clave.Text;
+            string usuario = TXT_Usuario.Text.ToLower();
+            if ((usuario == "claudio") && (password == "casas"))
+            {
+                Response.Redirect("Ejercicio4_Valido.aspx");
+            }
+            else
+            {
+                Response.Redirect("Ejercicio4_Error.aspx");
+            }
         }
     }
 }

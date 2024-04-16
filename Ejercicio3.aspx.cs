@@ -18,5 +18,20 @@ namespace TP2_Grupo_4
         {
             Response.Redirect("00-Portada.aspx");
         }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            LBL_Texto.ForeColor = System.Drawing.Color.GreenYellow;
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            LBL_Texto.ForeColor = System.Drawing.Color.Red;
+        }
+
+        protected void LinkButton3_Click(object sender, EventArgs e)
+        {
+            LBL_Texto.ForeColor = System.Drawing.Color.Blue;
+        }
     }
 }

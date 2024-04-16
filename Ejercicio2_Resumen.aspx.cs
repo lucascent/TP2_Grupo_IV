@@ -22,11 +22,11 @@ namespace TP2_Grupo_4
             {
                 if (i.Selected)
                 {
-                    SeleccionTemas += " " + i + "\n";
+                    SeleccionTemas += " * " + i;
                 }
             }
 
-            LBL_TemasElegidos.Text = SeleccionTemas ;
+            LBL_TemasElegidos.Text = SeleccionTemas;
             
         }
 

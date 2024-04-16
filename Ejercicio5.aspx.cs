@@ -18,5 +18,12 @@ namespace TP2_Grupo_4
         {
             Response.Redirect("00-Portada.aspx");
         }
+
+        protected void BTN_CalcularPrecio_Click(object sender, EventArgs e)
+        {
+            string memoria = DDL_Memoria.SelectedValue;
+            string Accesorio = CBL_Accesorios.SelectedValue;
+
+        }
     }
 }
