@@ -47,11 +47,14 @@
             width: 336px;
             height: 28px;
         }
+        .auto-style13 {
+            margin-bottom: 7px;
+        }
     </style>
     </head>
 <body>
     <form id="form1" runat="server">
-        <div id="BTN_GenerarTabla">
+        <div >
 
 
 
@@ -93,7 +96,7 @@
 
 
             <br />
-            <asp:Button ID="BTN_GenerarTabla" runat="server" BackColor="#FFCC00" Font-Bold="True" Font-Names="Bahnschrift" Font-Size="Medium" ForeColor="White" Height="50px" OnClick="BTN_GenerarTabla_Click" Text="Generar Tabla" Width="150px" />
+            <asp:Button ID="BTN_GenerarTabla" runat="server" BackColor="#FFCC00" Font-Bold="True" Font-Names="Bahnschrift" Font-Size="Medium" ForeColor="White" Height="50px" OnClick="BTN_GenerarTabla_Click" Text="Generar Tabla" Width="150px" CssClass="auto-style13" />
             <br />
             <br />
             <br />

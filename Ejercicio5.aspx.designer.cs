@@ -78,13 +78,13 @@ namespace TP2_Grupo_4
         protected global::System.Web.UI.WebControls.Button BTN_CalcularPrecio;
 
         /// <summary>
-        /// Control TXT_Preciofinal.
+        /// Control LBL_Preciofinal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TXT_Preciofinal;
+        protected global::System.Web.UI.WebControls.Label LBL_Preciofinal;
 
         /// <summary>
         /// Control BTN_Volver.

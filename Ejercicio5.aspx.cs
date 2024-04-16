@@ -21,8 +21,37 @@ namespace TP2_Grupo_4
 
         protected void BTN_CalcularPrecio_Click(object sender, EventArgs e)
         {
-            string memoria = DDL_Memoria.SelectedValue;
-            string Accesorio = CBL_Accesorios.SelectedValue;
+            double precio = 0;
+      
+                foreach (ListItem itm in CBL_Accesorios.Items)
+                {
+                    if (itm.Selected)
+                    {
+                        switch (itm.Value)
+                        {
+                            case "1":
+                                precio += 2000.50;
+                                LBL_Preciofinal.Text = precio.ToString();
+                                break;
+                            case "2":
+                                precio += 550.50;
+                                LBL_Preciofinal.Text = precio.ToString();
+                                break;
+                            case "3":
+                                precio += 1200.00;
+                                LBL_Preciofinal.Text = precio.ToString();
+                                break;
+
+                            default:
+                                break;
+                        }
+
+                    }
+                }
+        }
+
+        protected void CBL_Accesorios_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

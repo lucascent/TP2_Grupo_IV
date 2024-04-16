@@ -30,7 +30,7 @@
             <asp:Label ID="Label1" runat="server" Text="Seleccione Accesorios"></asp:Label>
             <br />
             <br />
-            <asp:CheckBoxList ID="CBL_Accesorios" runat="server">
+            <asp:CheckBoxList ID="CBL_Accesorios" runat="server" OnSelectedIndexChanged="CBL_Accesorios_SelectedIndexChanged">
                 <asp:ListItem Value="1">Monitor LCD</asp:ListItem>
                 <asp:ListItem Value="2">HD 500 GB</asp:ListItem>
                 <asp:ListItem Value="3">Grabador DVD</asp:ListItem>
@@ -39,7 +39,7 @@
             <asp:Button ID="BTN_CalcularPrecio" runat="server" OnClick="BTN_CalcularPrecio_Click" Text="Calcular Precio" />
             <br />
             <br />
-            <asp:Label ID="TXT_Preciofinal" runat="server"></asp:Label>
+            <asp:Label ID="LBL_Preciofinal" runat="server"></asp:Label>
             <br />
             <br />
 

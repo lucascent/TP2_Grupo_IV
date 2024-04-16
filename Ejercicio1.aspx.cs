@@ -21,13 +21,13 @@ namespace TP2_Grupo_4
 
         protected void BTN_GenerarTabla_Click(object sender, EventArgs e)
         {
-            int cant1 = int.Parse(TXT_Cant1.Text);
-            int cant2 = int.Parse(TXT_Cant2.Text);
-            int total = 0;
-
+            int cant = int.Parse(TXT_Cant1.Text);
+            cant += int.Parse(TXT_Cant2.Text);
+            LBL_Cant1.Text = TXT_Cant1.Text;
+            LBL_Cant2.Text = TXT_Cant2.Text;
             LBL_Prod1.Text = TXT_Prod1.Text;
             LBL_Prod2.Text = TXT_Prod2.Text;
-
+            LBL_Total.Text = cant.ToString();
             TXT_Prod1.Text = string.Empty;
             TXT_Prod2.Text = string.Empty;
             TXT_Cant1.Text = string.Empty;
