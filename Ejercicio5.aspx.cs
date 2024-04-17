@@ -11,7 +11,10 @@ namespace TP2_Grupo_4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                DDL_Memoria.Items.Insert(0, "-- Seleccione la cantidad de memoria --");
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -22,32 +25,43 @@ namespace TP2_Grupo_4
         protected void BTN_CalcularPrecio_Click(object sender, EventArgs e)
         {
             double precio = 0;
-      
-                foreach (ListItem itm in CBL_Accesorios.Items)
+
+            switch (DDL_Memoria.SelectedValue)
+            {
+                case "1":
+                    precio += 200;
+                    break;
+                case "2":
+                    precio += 375;
+                    break;
+                case "3":
+                    precio += 500;
+                    break;
+            }
+
+            foreach (ListItem itm in CBL_Accesorios.Items)
+            {
+                if (itm.Selected)
                 {
-                    if (itm.Selected)
+                    switch (itm.Value)
                     {
-                        switch (itm.Value)
-                        {
-                            case "1":
-                                precio += 2000.50;
-                                LBL_Preciofinal.Text = precio.ToString();
-                                break;
-                            case "2":
-                                precio += 550.50;
-                                LBL_Preciofinal.Text = precio.ToString();
-                                break;
-                            case "3":
-                                precio += 1200.00;
-                                LBL_Preciofinal.Text = precio.ToString();
-                                break;
+                        case "1":
+                            precio += 2000.50;
+                            break;
+                        case "2":
+                            precio += 550.50;
+                            break;
+                        case "3":
+                            precio += 1200.00;
+                            break;
 
-                            default:
-                                break;
-                        }
-
+                        default:
+                            break;
                     }
+
                 }
+            }
+            LBL_Preciofinal.Text = precio.ToString("N2");
         }
 
         protected void CBL_Accesorios_SelectedIndexChanged(object sender, EventArgs e)
